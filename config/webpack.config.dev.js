@@ -321,8 +321,9 @@ module.exports = {
           {
             test: lessRegex,
             exclude: sassModuleRegex,
-            use: getStyleLoaders({ importLoaders: 2 }, 'less-loader', {
-              javascriptEnabled: true
+            use: getStyleLoaders({ importLoaders: 2, sourceMap: true }, 'less-loader', {
+              javascriptEnabled: true,
+              sourceMap: true
             }),
           },
           // "file" loader makes sure those assets get served by WebpackDevServer.
